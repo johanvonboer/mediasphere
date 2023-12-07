@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: white;
+    overflow: hidden;
+
+    background: linear-gradient(45deg, #ff00f7, #a300ff, #001eff, #00f6ff, #00ff57);
+    background-size: 400% 400%;
+    animation: gradientAnimation 30s ease infinite;
+}
+
+ h1 {
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+ }
+
+#main-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#sketch-container {
+    display:none;
+    width: 100vw;
+    height: 100vh;
+}
+
+#upload-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50%;
+    min-width: 50%;
+}
+
+#dropzone {
+    background: white;
+    width: 50vw;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    color: black;
+}
+
+#create-btn {
+    margin-top: 1em;
+    font-size: 1.5em;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    padding: 0.5em;
+    background: white;
+    color: black;
+}
+
+#create-btn:hover {
+    background: #ddd;
+    color: #000;
+    cursor: pointer;
+}
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    color: #000;
+}
+
+@keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+.dz-progress {
+    display: none !important;
+}
+
