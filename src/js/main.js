@@ -10,6 +10,40 @@ import { Dropzone } from "dropzone";
 import "dropzone/dist/dropzone.css";
 
 
+let presets = [
+  {
+    name: "Linda B",
+    images: [
+      "ascrowssing.png",
+      "bethwhee.png",
+      "blarr.png",
+      "calamityoftouch.png",
+      "cardgames.png",
+      "eyreequel.png",
+      "fallen.png",
+      "forest.png",
+      "goddess.png",
+      "hand.png",
+      "helium.png",
+      "horn.png",
+      "ikaril.png",
+      "jeir.png",
+      "kgdfjkgh.png",
+      "mehach.png",
+      "lovely.png",
+      "vic2.png"
+    ]
+  },
+  {
+    name: "Mattis L",
+    images: []
+  },
+  {
+    name: "Carl-Erik E",
+    images: []
+  }
+];
+
 let canvasWidth = 100;
 let canvasHeight = 100;
 let maskImage = null;
@@ -37,6 +71,7 @@ let renderDustCloud = true;
 let targetRotX = 0.0;
 let targetRotY = 0.0;
 const mistImages = [];
+let loadingPreset = false;
 
 let sketchContainer = document.getElementById("sketch-container");
 
@@ -52,6 +87,8 @@ function resizeToFullScreen() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
+
+  
 
     const dropzone = new Dropzone("#dropzone", {
         url: "/dummy-url", // Set a dummy URL to prevent Dropzone from making a server request
@@ -104,6 +141,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
       document.getElementById("create-btn").addEventListener("click", function() {
         console.log("create button clicked");
+        if(loadingPreset) {
+          alert("Please wait for the preset to finish loading");
+          return;
+        }
 
         if(rawImages.length < 1) {
           alert("Please feed me at least one image");
@@ -118,6 +159,47 @@ document.addEventListener("DOMContentLoaded", function() {
         new SeadBubbles(p5, sketch);
         
         sketchContainer.style.display = "none";
+      });
+
+
+      document.getElementsByClassName("preset-button").forEach(btn => {
+        btn.addEventListener("click", function() {
+          let preset = this.getAttribute("data-preset");
+          console.log("preset: " + preset);
+          let loadedImages = 0;
+          
+          presets.forEach(p => {
+            if(p.name == preset) {
+              if(p.images.length > 0) {
+                loadingPreset = true;
+                document.getElementById("create-btn").innerHTML = "<img src='loading.svg' />";
+              }
+
+              dropzone.removeAllFiles();
+              p.images.forEach(image => {
+                let xhr = new XMLHttpRequest();
+                xhr.open('GET', "https://demo.humlab.umu.se/imagesphere/presets/"+p.name+"/"+image, true);
+                xhr.responseType = 'blob';
+                xhr.onload = function(e) {
+                  if (this.status == 200) {
+                    // get binary data as a response
+                    var blob = this.response;
+                    //convert to File type
+                    blob.lastModifiedDate = new Date();
+                    blob.name = image;
+                    dropzone.addFile(blob);
+                    loadedImages++;
+                    if(loadedImages == p.images.length) {
+                      document.getElementById("create-btn").innerHTML = "RENDER";
+                      loadingPreset = false;
+                    }
+                  }
+                }
+                xhr.send();
+              });
+            }
+          });
+        });
       });
 
 });
@@ -258,6 +340,14 @@ const sketch = (p5) => {
       
       let rectW = 320*3;
       let rectH = 200*3;
+
+      //figure out the rect dimensions based on the image aspect ratio
+      let aspectRatio = images[imageIndex].image.width / images[imageIndex].image.height;
+      if(aspectRatio > 1) {
+        rectH = rectW / aspectRatio;
+      } else {
+        rectW = rectH * aspectRatio;
+      }
 
       p5.rect(0, 0, rectW, rectH);
       p5.pop();

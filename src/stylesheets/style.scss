@@ -86,3 +86,28 @@ body {
     display: none !important;
 }
 
+#presets {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.preset-button {
+    margin: 0 0.5em;
+    font-size: 1.5em;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    padding: 0.5em;
+    //add a nice pink gradient background
+    background: linear-gradient(45deg, #ff00f7, #a300ff);
+    color: #fff;
+    cursor: pointer;
+}
+
+.preset-button:hover {
+    background: linear-gradient(45deg, #ff00f7, #001eff);
+    color: #fff;
+}
