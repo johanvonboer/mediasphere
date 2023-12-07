@@ -32,6 +32,7 @@ let momentumX = 0;
 let momentumY = 0;
 let dampingFactor = 0.9; // Adjust the damping factor to control the inertia
 let maxSpeed = 0.05; // Adjust the maximum speed
+let renderDustCloud = true;
 
 let targetRotX = 0.0;
 let targetRotY = 0.0;
@@ -210,7 +211,9 @@ const sketch = (p5) => {
 
   p5.draw = () => {
     p5.background(0);
-    p5.renderDustCloud();
+    if(renderDustCloud) {
+      p5.renderDustCloud();
+    }
 
     let x = globalRotX;
     let y = globalRotY;
@@ -336,6 +339,11 @@ const sketch = (p5) => {
       sphereRadius -= 50;
       p5.calculateHookPoints();
       console.log("sphereRadius: " + sphereRadius);
+    }
+
+    if(p5.keyCode == 49) {
+      //toggle dust cloud
+      renderDustCloud = !renderDustCloud;
     }
 
     if(p5.keyCode == p5.UP_ARROW) {
