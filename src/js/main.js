@@ -410,13 +410,13 @@ p5.renderDustCloud = () => {
         if(p5.fadeOut == false && p5.fadeFrames > 0) {
             p.opacity = p5.map(p5.fadeFrames, 60, 0, 0, 1.0);
         }
-        let opacity = Math.abs(p5.sin(p.waves[2]))*160 * p.opacity;
+        let opacity = Math.abs(p5.sin(p.waves[2]))*60 * p.opacity;
         //if(opacity > 200) { opacity = 150; }
         //p5.fill(255, 255, 255, opacity);
         //p5.ellipse(0, 0, 8, 2);
         p5.tint(255, 255, 255, opacity)
         p5.texture(starImage);
-        p5.rect(0, 0, 50, 50);
+        p5.rect(0, 0, 25, 25);
         p5.pop();
     });
 }
