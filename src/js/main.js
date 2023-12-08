@@ -35,6 +35,33 @@ let presets = [
     ]
   },
   {
+    name: "SEAD",
+    images: [
+      'Aquatics.jpg',
+      'Carrion.jpg',
+      'Coniferous.jpg',
+      'Deciduous.jpg',
+      'Disturbed_arable.jpg',
+      'Dry_dead_wood.jpg',
+      'Dung.jpg',
+      'Dung_foul_habitats.jpg',
+      'Ectoparasite.jpg',
+      'General_synanthropic.jpg',
+      'Halotolerant.jpg',
+      'Heathland_&_moorland.jpg',
+      'Meadowland.jpg',
+      'Mould_beetles.jpg',
+      'Open_wet_habitats.jpg',
+      'Pasture_Dung.jpg',
+      'Running_water.jpg',
+      'Sandy_dry_disturbed_arable.jpg',
+      'Standing_water.jpg',
+      'Stored_grain_pest.jpg',
+      'Wetlands_marshes.jpg',
+      'Wood_and_trees.jpg'
+  ]
+  },
+  {
     name: "Mattis L",
     images: []
   },

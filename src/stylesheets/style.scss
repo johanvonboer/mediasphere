@@ -6,9 +6,8 @@ body {
     color: white;
     overflow: hidden;
 
-    background: linear-gradient(45deg, #ff00f7, #a300ff, #001eff, #00f6ff, #00ff57);
-    background-size: 400% 400%;
-    animation: gradientAnimation 30s ease infinite;
+    background: linear-gradient(45deg, #272727, #2B50AA);
+    background-size: 100% 100%;
 }
 
  h1 {
@@ -44,6 +43,7 @@ body {
     width: 50vw;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
     color: black;
+    overflow: auto;
 }
 
 #create-btn {
@@ -51,13 +51,14 @@ body {
     font-size: 1.5em;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
     padding: 0.5em;
-    background: white;
-    color: black;
+    background: #FF9FE5;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
 #create-btn:hover {
-    background: #ddd;
-    color: #000;
+    background: #f1c1e5;
+    color: white;
     cursor: pointer;
 }
 
@@ -100,14 +101,15 @@ body {
     margin: 0 0.5em;
     font-size: 1.5em;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     padding: 0.5em;
     //add a nice pink gradient background
-    background: linear-gradient(45deg, #ff00f7, #a300ff);
+    background: #FF9FE5;
     color: #fff;
     cursor: pointer;
 }
 
 .preset-button:hover {
-    background: linear-gradient(45deg, #ff00f7, #001eff);
+    background: #f1c1e5;
     color: #fff;
 }
