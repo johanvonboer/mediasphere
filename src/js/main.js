@@ -59,6 +59,28 @@ let presets = [
     ]
   },
   {
+    name: "Nature",
+    images: [
+      "freenaturestock-2122.jpg",
+      "freenaturestock-2124.jpg",
+      "freenaturestock-2125.jpg",
+      "freenaturestock-2127.jpg",
+      "freenaturestock-2130.jpg",
+      "freenaturestock-2133.jpg",
+      "freenaturestock-2147.jpg",
+      "freenaturestock-2185.jpg",
+      "freenaturestock-2190.jpg",
+      "freenaturestock-2195.jpg",
+      "freenaturestock-2102.jpg",
+      "mixkit-blue-sky-background-as-the-clouds-travel-blown-by-the-26108-medium.mp4",
+      "mixkit-forest-stream-in-the-sunlight-529-medium.mp4",
+      "mixkit-people-pouring-a-warm-drink-around-a-campfire-513-medium.mp4",
+      "mixkit-raft-going-slowly-down-a-river-1218-medium.mp4",
+      "mixkit-rain-falling-on-the-water-of-a-lake-seen-up-18312-medium.mp4",
+      "mixkit-stars-in-space-background-1610-medium.mp4",
+    ]
+  },
+  {
     name: "Video mix",
     images: [
       "mixkit-rain-falling-on-the-water-of-a-lake-seen-up-18312-medium.mp4",
@@ -76,10 +98,6 @@ let presets = [
       "mixkit-raft-going-slowly-down-a-river-1218-medium.mp4",
     ]
   },
-  {
-    name: "Carl-Erik E",
-    images: []
-  }
 ];
 
 //place in top right corner
