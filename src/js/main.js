@@ -221,7 +221,7 @@ document.addEventListener("DOMContentLoaded", function() {
             dropzone.removeAllFiles();
             p.images.forEach(image => {
               let xhr = new XMLHttpRequest();
-              xhr.open('GET', "https://demo.humlab.umu.se/imagesphere/presets/"+p.name+"/"+image, true);
+              xhr.open('GET', "https://demo.humlab.umu.se/mediasphere/presets/"+p.name+"/"+image, true);
               xhr.responseType = 'blob';
               xhr.onload = function(e) {
                 if (this.status == 200) {
