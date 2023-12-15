@@ -142,7 +142,7 @@ export class MediaSphere {
       renderer.setSize(window.innerWidth, window.innerHeight);
   
       // Set the camera position
-      camera.position.z = 5;
+      camera.position.z = 10;
   
       this.calculateHookPoints();
   
@@ -177,7 +177,7 @@ export class MediaSphere {
             }
           `,
           transparent: true,
-          depthTest: false
+          depthTest: false,
         });
         
         let mediaWidth = 0;
@@ -236,7 +236,7 @@ export class MediaSphere {
         media.plane.position.z = media.position.z;
         const cameraRotation = camera.rotation.clone();
         media.plane.rotation.set(cameraRotation.x, cameraRotation.y, cameraRotation.z);
-        
+
         //set opacity
         //media.material.opacity = media.opacity / 255.0;
       });
@@ -244,6 +244,8 @@ export class MediaSphere {
       if (this.config.renderDustCloud) {
         this.renderDustCloud();
       }
+
+      
       
       // Smoothly transition towards the target rotation
       globalRotY = THREE.MathUtils.lerp(globalRotY, targetRotY, 0.1);
