@@ -260,7 +260,7 @@ export class MediaSphere {
       targetRotX -= momentumY;
     
       // Gradually reduce momentum over time
-      let minSpin = 0.0015;
+      let minSpin = 0.0005;
       if (momentumX > minSpin || momentumX < -minSpin) {
         momentumX *= dampingFactor;
       }
