@@ -63,13 +63,11 @@ let presets = [
     images: [
       "freenaturestock-2122.jpg",
       "freenaturestock-2124.jpg",
-      "freenaturestock-2125.jpg",
       "freenaturestock-2127.jpg",
       "freenaturestock-2130.jpg",
       "freenaturestock-2133.jpg",
       "freenaturestock-2147.jpg",
       "freenaturestock-2185.jpg",
-      "freenaturestock-2190.jpg",
       "freenaturestock-2195.jpg",
       "freenaturestock-2102.jpg",
       "mixkit-blue-sky-background-as-the-clouds-travel-blown-by-the-26108-medium.mp4",
