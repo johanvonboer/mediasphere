@@ -51,7 +51,7 @@ module.exports = (env, config) => {
         },
         // Images
         {
-          test: /\.(?:ico|gif|png|jpg|jpeg|svg)$/i,
+          test: /\.(?:ico|gif|png|jpg|jpeg|svg|mp4)$/i,
           type: 'asset/resource',
         },
         // Fonts and SVGs

@@ -23,8 +23,8 @@ body {
     justify-content: center;
 }
 
-#sketch-container {
-    display:none;
+#threejs-canvas {
+    display: none;
     width: 100vw;
     height: 100vh;
 }
@@ -112,4 +112,8 @@ body {
 .preset-button:hover {
     background: #f1c1e5;
     color: #fff;
+}
+
+.awn-toast {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
