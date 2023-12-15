@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       let btn = document.getElementById("create-btn");
       btn.classList.add("loading-container");
-      btn.innerHTML = "<img src='loading.svg' />";
+      btn.innerHTML = `<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='150' height='50'%3E%3Cg fill='%23000'%3E%3Ccircle cx='4' cy='12' r='2'%3E%3Canimate attributeName='opacity' begin='0s' dur='0.6s' values='1;0;0;0;0;0;0;0' keyTimes='0;0.1;0.2;0.3;0.4;0.5;0.6;1' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='12' cy='12' r='2'%3E%3Canimate attributeName='opacity' begin='0.15s' dur='0.6s' values='0;1;0;0;0;0;0;0' keyTimes='0;0.1;0.2;0.3;0.4;0.5;0.6;1' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='20' cy='12' r='2'%3E%3Canimate attributeName='opacity' begin='0.3s' dur='0.6s' values='0;0;1;0;0;0;0;0' keyTimes='0;0.1;0.2;0.3;0.4;0.5;0.6;1' repeatCount='indefinite'/%3E%3C/circle%3E%3C/g%3E%3C/svg%3E" alt="Loading..." />`;
 
       mediaSphere = new MediaSphere(inputMedia, {
         imageMimeTypes: imageMimeTypes,
